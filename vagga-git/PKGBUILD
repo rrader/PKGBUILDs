@@ -5,10 +5,10 @@ pkgver() {
   cd "$pkgname"
   git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
-pkgver=v0.2.5.r21.gdd8a9c6
+pkgver=v0.2.5.r36.gc9f5b17
 pkgrel=1
 pkgdesc="Vagga is a containerisation tool without daemons"
-arch=('any')
+arch=('i686' 'x86_64')
 url="http://vagga.readthedocs.org"
 license=('MIT')
 depends=('shadow' 'glibc-static')
@@ -39,4 +39,5 @@ build() {
 package() {
 	cd "$pkgname"
 	make install DESTDIR="$pkgdir" PREFIX=/usr
+	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
