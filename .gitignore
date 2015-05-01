@@ -2,3 +2,8 @@
 vagga-git/src
 vagga-git/pkg
 vagga-git/vagga-git
+*.src.tar.gz
+core/linux/linux.install.pkg
+
+user-ns-kernel/*.log
+user-ns-kernel/core/linux
