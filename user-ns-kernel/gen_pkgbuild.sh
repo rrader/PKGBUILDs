@@ -43,4 +43,8 @@ echo "===> makepkg --source" | tee -a gen_pkgbuild.log
 	makepkg --source
 )
 
+echo "===> ALL *.src.tar.gz WILL BE REMOVED" | tee -a gen_pkgbuild.log
+rm -f *.src.tar.gz
 mv "${BASE_PACKAGE}"/*.src.tar.gz ./
+
+tar xf linux-user-ns-enabled-4.0.5-1.src.tar.gz linux-user-ns-enabled -C aur4
