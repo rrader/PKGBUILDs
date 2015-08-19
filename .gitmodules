@@ -1,3 +1,6 @@
 [submodule "user-ns-kernel/aur4"]
 	path = user-ns-kernel/aur4
 	url = ssh://aur@aur4.archlinux.org/linux-user-ns-enabled.git
+[submodule "vagga-bin/aur4"]
+	path = vagga-bin/aur4
+	url = ssh://aur@aur4.archlinux.org/vagga-bin.git
